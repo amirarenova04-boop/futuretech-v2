@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>FutureTech</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/hero.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* INFO TEXT UNDER CARDS */
+.info-cards p {
+    margin: 5px 0;
+}
+
+/* NEW BLOCK */
+section#topics img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* ARTICLE */
+#cosmos-article {
+    padding:40px;
+    text-align:center;
+    background: rgba(0,0,0,0.5);
+    border-radius:15px;
+    margin:20px;
+}
+
+/* FORM */
+.form, .auth {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0,0,0,0.6);
+    margin: 20px;
+    border-radius: 15px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #3b82f6;
+    margin: 0 10px;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>FutureTech</h1>
+    <nav>
+        <a onclick="showHome()">Главная</a>
+        <a onclick="showRegister()">Регистрация</a>
+        <a onclick="showLogin()">Вход</a>
+        <a onclick="showProfile()">Профиль</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<div id="home">
+    <section class="hero">
+        <h2>Технологии будущего уже здесь 🚀</h2>
+        <p>AI, роботы, космос</p>
+        <button onclick="alert('Добро пожаловать!')">Подробнее</button>
+    </section>
+
+    <!-- CARDS WITH TEXT AND IMAGES -->
+    <section class="cards">
+        <div class="card">
+            <img src="images/ai.jpg" alt="Искусственный интеллект">
+            <h3>🤖 Искусственный интеллект</h3>
+            <p>Технологии, которые помогают компьютерам думать, учиться и принимать решения.</p>
+        </div>
+        <div class="card">
+            <img src="images/robot.jpg" alt="Роботы">
+            <h3>🚗 Роботы</h3>
+            <p>Машины, которые помогают людям выполнять работу быстрее и безопаснее.</p>
+        </div>
+        <div class="card">
+            <img src="images/space.jpg" alt="Космос">
+            <h3>🚀 Космос</h3>
+            <p>Исследование планет, звёзд и технологий для полётов и будущих миссий.</p>
+        </div>
+    </section>
+
+    <!-- ARTICLE ABOUT SPACE -->
+    <section id="cosmos-article">
+        <h2>🌌 Исследование космоса</h2>
+        <img src="images/space2.jpg" alt="Космос" style="width:60%; border-radius:12px; margin-bottom:20px;">
+        <p>
+            Космос — это огромная и загадочная вселенная за пределами нашей планеты. 
+            Люди исследуют планеты, звёзды и галактики, создают спутники и космические станции, 
+            разрабатывают технологии для полётов на Луну, Марс и дальше.
+        </p>
+        <p>
+            Современные миссии изучают не только физические свойства космоса, но и ищут признаки жизни, 
+            изучают космическую погоду и возможности для колонизации других планет.
+        </p>
+    </section>
+
+    <!-- NEW BLOCK ABOUT SMART HOME AND ROBOTS -->
+    <section id="topics" style="padding:40px; text-align:center;">
+
+        <h2>Умный дом</h2>
+        <img src="images/smarthome.jpg" alt="Умный дом" style="width:60%; border-radius:15px;">
+        <p>Умный дом — это технологии, которые помогают автоматизировать быт, повышать комфорт и безопасность.</p>
+
+        <h2>Роботы и работа</h2>
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+            <div style="width:300px;">
+                <img src="images/robotwork1.jpg" alt="Роботы на заводе" style="width:100%; border-radius:12px;">
+                <p>Роботы на заводах помогают собирать продукцию быстрее и точнее.</p>
+            </div>
+            <div style="width:300px;">
+                <img src="images/robotwork2.jpg" alt="Роботы помогают людям" style="width:100%; border-radius:12px;">
+                <p>Роботы помогают людям в работе, выполняя опасные и тяжёлые задачи.</p>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<!-- REGISTRATION -->
+<div id="register" style="display:none;">
+    <section class="auth">
+        <h2>Регистрация</h2>
+        <input type="text" id="username" placeholder="Имя"><br>
+        <input type="password" id="password" placeholder="Пароль"><br>
+        <button onclick="register()">Зарегистрироваться</button>
+        <p id="message"></p>
+    </section>
+</div>
+
+<!-- LOGIN -->
+<div id="login" style="display:none;">
+    <section class="auth">
+        <h2>Вход</h2>
+        <input type="text" id="loginUser" placeholder="Имя"><br>
+        <input type="password" id="loginPass" placeholder="Пароль"><br>
+        <button onclick="login()">Войти</button>
+        <p id="loginMessage"></p>
+    </section>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" style="display:none;">
+    <section class="auth">
+        <h2>Профиль</h2>
+        <p id="profileInfo"></p>
+    </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>Контакты: futuretech@example.com</p>
+    <p>
+        <a href="#">Instagram</a> |
+        <a href="#">Telegram</a> |
+        <a href="#">VK</a>
+    </p>
+</footer>
+
+<script>
+function showHome() {
+    document.getElementById("home").style.display = "block";
+    document.getElementById("register").style.display = "none";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("profile").style.display = "none";
+}
+
+function showRegister() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("register").style.display = "block";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("profile").style.display = "none";
+}
+
+function showLogin() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("register").style.display = "none";
+    document.getElementById("login").style.display = "block";
+    document.getElementById("profile").style.display = "none";
+}
+
+function showProfile() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("register").style.display = "none";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("profile").style.display = "block";
+    let user = localStorage.getItem("user");
+    document.getElementById("profileInfo").innerText = user ? `Привет, ${user}!` : "Вы не вошли.";
+}
+
+function register() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    if (username === "" || password === "") {
+        document.getElementById("message").innerText = "Заполни все поля!";
+        return;
+    }
+    localStorage.setItem("user", username);
+    localStorage.setItem("pass", password);
+    document.getElementById("message").innerText = "Ты зарегистрирован!";
+}
+
+function login() {
+    let username = document.getElementById("loginUser").value;
+    let password = document.getElementById("loginPass").value;
+    let storedUser = localStorage.getItem("user");
+    let storedPass = localStorage.getItem("pass");
+    if(username === storedUser && password === storedPass) {
+        document.getElementById("loginMessage").innerText = "Вход успешен!";
+        showProfile();
+    } else {
+        document.getElementById("loginMessage").innerText = "Неверный логин или пароль";
+    }
+}
+</script>
+
+</body>
+</html>
